@@ -12,10 +12,9 @@ function App() {
     try {
       const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=760dc2617eb1a39f1c3c50666743a368`)
       const result = await response.json()
-      console.log(result)
+
       setWeather({ city: city, temp: `${result.list[0].main.temp} °`, wind: `${result.list[0].wind.speed} MPH`, humidity: `${result.list[0].main.humidity} %`, conditions: `https://openweathermap.org/img/wn/${result.list[0].weather[0].icon}@2x.png` })
-      console.log(result.list[0].weather[0].icon)
-      console.log(weather.conditions)
+
     } catch (error) {
       console.log(error)
     }
