@@ -2,6 +2,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrap from 'bootstrap'
 import Weather from './components/Weather'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       </div>
       <Weather />
       <Weather />
+      <Footer />
     </>
   )
 }
